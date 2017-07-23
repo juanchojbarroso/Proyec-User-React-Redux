@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
+import { showUsers } from './users.js'
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  user: showUsers
 });
 
 export default rootReducer;
+ 
