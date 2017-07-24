@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { showUsers } from '../actions';
+import { Table } from 'react-bootstrap'
 
 class App extends Component  {
 
@@ -11,7 +12,11 @@ componentWillMount(){
 renderUsersList() {
   return this.props.users.map((user) => {
     return(
-      <li key={user.id}>{user.name}</li>
+      <tr key={user.id}>
+        <td>{user.id}</td>
+        <td>{user.name}</td>
+        <td>{user.email}</td>
+      </tr>
     )
   })
 }
@@ -20,9 +25,18 @@ render() {
   return (
     <div>
       <h2>Users List</h2>
-      <ul>
-        { this.renderUsersList() }
-      </ul>
+      <Table responsive>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          { this.renderUsersList() }
+        </tbody>
+      </Table>
     </div>
   );
 }
