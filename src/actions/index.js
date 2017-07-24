@@ -1,15 +1,12 @@
-export const SHOW_USER = 'SHOW_USER'
-
+export const SHOW_USERS = 'SHOW_USERS'
 
 export function showUsers() {
-    
     const users =  [
-        {id: 1, name: 'Juan Barroso'},
-        {id: 2, name: 'Jose Gimenez'}
+        { id: 1, name: 'Juan Barroso' },
+        { id: 2, name: 'Jose Gimenez' }
     ]
-    
     return {
-        type: SHOW_USER ,
-        payload: []
+        type: SHOW_USERS ,
+        payload: users
     }
 }

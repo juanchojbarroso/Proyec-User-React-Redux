@@ -1,4 +1,4 @@
-import { SHOW_USERS } from '../actions'
+import { SHOW_USERS  } from '../actions'
 
 const initialState = {
     list: []
@@ -12,4 +12,4 @@ export function showUsers(state = initialState, action){
         default:
             return state
     }
-}
+}       
